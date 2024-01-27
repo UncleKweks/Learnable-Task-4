@@ -83,30 +83,30 @@ class MovieStore {
 
 const movieStore = new MovieStore();
 
-const user1 = movieStore.addUser("John");
-const user2 = movieStore.addUser("Alice");
+const user1 = movieStore.addUser("Ken");
+const user2 = movieStore.addUser("Lucy");
 
-movieStore.addMovie("Inception", 5);
-movieStore.addMovie("The Dark Knight", 3);
-movieStore.addMovie("Toy Story", 7);
-movieStore.addMovie("The Shawshank Redemption", 4);
-movieStore.addMovie("Interstellar", 6);
-movieStore.addMovie("The Godfather", 2);
-movieStore.addMovie("Avatar", 8);
+movieStore.addMovie("Barbie", 20);
+movieStore.addMovie("Batman Begins", 30);
+movieStore.addMovie("Toy Story III", 6);
+movieStore.addMovie("Dunkrik", 10);
+movieStore.addMovie("Avatar II:Way of Water", 60);
+movieStore.addMovie("The Irishman", 40);
+movieStore.addMovie("Bullet Train", 25);
 
 console.log("Available Movies:");
-console.table(movieStore.getMovies());
+console.log(movieStore.getMovies());
 
-console.log("Renting movie for John:", movieStore.rentMovie(user1, 1));
-console.log("Renting movie for Alice:", movieStore.rentMovie(user2, 2));
+console.log("Renting movie for Ken:", movieStore.rentMovie(user1, 1));
+console.log("Renting movie for Lucy:", movieStore.rentMovie(user2, 2));
 
 console.log("Available Movies after renting:");
-console.table(movieStore.getMovies());
+console.log(movieStore.getMovies());
 
-console.log("Returning movie for John:", movieStore.returnMovie(user1, 1));
+console.log("Returning movie for Ken:", movieStore.returnMovie(user1, 1));
 
 console.log("Available Movies after returning:");
-console.table(movieStore.getMovies());
+console.log(movieStore.getMovies());
 
-console.log("Movies rented by Alice:");
-console.table(movieStore.viewRentedMovies(user2));
+console.log("Movies rented by Lucy:");
+console.log(movieStore.viewRentedMovies(user2));
